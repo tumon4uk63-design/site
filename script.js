@@ -102,17 +102,65 @@ function setupForms() {
   });
 }
 
-function setupCart() {
-  const cartItemsEl = document.getElementById("cart-items");
-  const cartEmptyEl = document.getElementById("cart-empty");
-  const cartSummaryEl = document.getElementById("cart-summary");
+function getStoredCart() {
+  try {
+    const raw = localStorage.getItem("atomdata_cart");
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveStoredCart(cart) {
+  try {
+    localStorage.setItem("atomdata_cart", JSON.stringify(cart));
+  } catch {
+    // ignore
+  }
+}
+
+function setupAddToCart() {
+  const toast = document.getElementById("toast");
+
+  function showToast() {
+    if (!toast) return;
+    toast.textContent = "Товар добавлен в корзину (демо‑режим).";
+    toast.classList.add("toast--visible");
+    toast.setAttribute("aria-hidden", "false");
+    setTimeout(() => {
+      toast.classList.remove("toast--visible");
+      toast.setAttribute("aria-hidden", "true");
+    }, 2200);
+  }
+
+  document.querySelectorAll("[data-add-to-cart]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const name = btn.getAttribute("data-product") || btn.dataset.productName || "Позиция каталога";
+      if (!name) return;
+      const cart = getStoredCart();
+      cart[name] = (cart[name] || 0) + 1;
+      saveStoredCart(cart);
+      showToast();
+    });
+  });
+}
+
+function renderCartPage() {
+  const cartItemsEl = document.getElementById("cart-items-page");
+  const cartEmptyEl = document.getElementById("cart-empty-page");
+  const cartSummaryEl = document.getElementById("cart-summary-page");
+  const clearButtons = document.querySelectorAll("[data-clear-cart]");
+
   if (!cartItemsEl || !cartEmptyEl || !cartSummaryEl) return;
 
-  const cart = new Map();
+  function render() {
+    const cartObj = getStoredCart();
+    const entries = Object.entries(cartObj);
 
-  function renderCart() {
-    const entries = Array.from(cart.entries());
     if (entries.length === 0) {
+      cartItemsEl.innerHTML = "";
       cartItemsEl.style.display = "none";
       cartSummaryEl.style.display = "none";
       cartEmptyEl.style.display = "";
@@ -132,22 +180,17 @@ function setupCart() {
     cartEmptyEl.style.display = "none";
     cartItemsEl.style.display = "";
     cartSummaryEl.style.display = "";
-    cartSummaryEl.textContent = `Всего позиций: ${entries.length}, общее количество единиц оборудования: ${totalCount}. Для уточнения конфигурации отправьте запрос через форму контактов.`;
+    cartSummaryEl.textContent = `Всего позиций: ${entries.length}, общее количество единиц оборудования: ${totalCount}. Для оформления запроса укажите состав корзины в форме на странице контактов.`;
   }
 
-  function addToCart(name) {
-    if (!name) return;
-    const current = cart.get(name) || 0;
-    cart.set(name, current + 1);
-    renderCart();
-  }
-
-  document.querySelectorAll("[data-add-to-cart]").forEach((btn) => {
+  clearButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const name = btn.getAttribute("data-product") || btn.dataset.productName || "Позиция каталога";
-      addToCart(name);
+      saveStoredCart({});
+      render();
     });
   });
+
+  render();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -155,6 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSmoothScroll();
   setupModal();
   setupForms();
-  setupCart();
+  setupAddToCart();
+  renderCartPage();
 });
 

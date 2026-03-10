@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Корзина — Атомдата‑Интеграция</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Корзина сайта‑витрины Атомдата‑Интеграция: выбранное оборудование и ИТ‑решения для объектов атомной отрасли."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <div class="logo">
+          <span class="logo__mark">АО</span>
+          <span class="logo__text">
+            Атомдата‑Интеграция
+            <span class="logo__subtitle">Цифровые решения атомной отрасли</span>
+          </span>
+        </div>
+        <nav class="nav">
+          <a href="index.html#catalog" class="nav__link">Каталог</a>
+          <a href="cart.html" class="nav__link">Корзина</a>
+          <a href="index.html#company" class="nav__link">О компании</a>
+          <a href="index.html#contacts" class="nav__link nav__link--primary">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--gray">
+        <div class="container">
+          <h1 class="section__title">Корзина</h1>
+          <p class="section__subtitle">
+            Здесь отображается оборудование, которое вы добавили с главной страницы. Корзина формирует перечень
+            позиций для последующего запроса коммерческого предложения.
+          </p>
+
+          <div class="card">
+            <h2 class="card__title">Состав корзины</h2>
+            <div id="cart-empty-page" class="card__text">
+              Ваша корзина пуста. Вернитесь в каталог и добавьте интересующие позиции.
+            </div>
+            <ul id="cart-items-page" class="card__list" style="display: none"></ul>
+            <p id="cart-summary-page" class="card__text" style="display: none"></p>
+
+            <div class="form__footer" style="margin-top: 10px">
+              <a href="index.html#catalog" class="btn btn--ghost">Вернуться в каталог</a>
+              <button type="button" class="btn btn--primary" data-clear-cart>Очистить корзину</button>
+            </div>
+          </div>
+
+          <p class="form__note" style="margin-top: 10px">
+            Для оформления запроса укажите состав корзины в форме на странице контактов или приложите выгрузку
+            корзины к официальному письму.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <span>© 2022–2025 АО «Атомдата‑Интеграция»</span>
+          <span class="footer__dot">•</span>
+          <span>Сайт‑витрина оборудования и услуг</span>
+        </div>
+        <div class="footer__right">
+          <a href="index.html#catalog" class="footer__link">Каталог</a>
+          <a href="cart.html" class="footer__link">Корзина</a>
+          <a href="index.html#company" class="footer__link">О компании</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" aria-hidden="true">
+      <span class="toast__text">Изменения в корзине сохранены (демо‑режим).</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
