@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Атомдата-Интеграция — Оборудование и ИТ‑услуги</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Интернет-сайт по продаже оборудования и ИТ‑услуг компании Атомдата‑Интеграция: ЦОД и ИТ‑инфраструктура, доверенные программно‑аппаратные комплексы, геоинформационные системы, поставка оборудования, информационная безопасность."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <div class="logo">
+          <span class="logo__mark">АО</span>
+          <span class="logo__text">
+            Атомдата‑Интеграция
+            <span class="logo__subtitle">Цифровые решения атомной отрасли</span>
+          </span>
+        </div>
+        <nav class="nav">
+          <a href="#catalog" class="nav__link">Каталог</a>
+          <a href="#cart" class="nav__link">Корзина</a>
+          <a href="#company" class="nav__link">О компании</a>
+          <a href="#contacts" class="nav__link nav__link--primary">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Надёжные ИТ‑решения и оборудование<br />
+            для критически важных систем
+          </h1>
+          <p class="hero__text">
+            Комплексные поставки оборудования, создание ЦОД и ИТ‑инфраструктуры, внедрение доверенных
+            программно‑аппаратных комплексов и платформенных бизнес‑приложений с соблюдением стандартов
+            атомной отрасли.
+          </p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" data-open-modal="request">
+              Запросить коммерческое предложение
+            </button>
+            <a href="#catalog" class="btn btn--ghost">Перейти в каталог</a>
+          </div>
+          <div class="hero__stats">
+            <div class="stat">
+              <div class="stat__value">50+</div>
+              <div class="stat__label">реализованных проектов</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">250+</div>
+              <div class="stat__label">высококвалифицированных специалистов</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">20+</div>
+              <div class="stat__label">лицензий и сертификатов</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__card">
+          <div class="hero-card">
+            <h2 class="hero-card__title">Доверенная платформа<br />для высоконагруженных систем</h2>
+            <ul class="hero-card__list">
+              <li>Размещение БД большого объёма в оперативной памяти</li>
+              <li>Высокая надёжность и отказоустойчивость</li>
+              <li>Поддержка катастрофоустойчивых решений</li>
+            </ul>
+            <button class="hero-card__btn" data-open-modal="request">
+              Получить консультацию
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="section section--gray">
+      <div class="container">
+        <h2 class="section__title">Ключевые решения</h2>
+        <p class="section__subtitle">
+          Решения, произведённые и апробированные в атомной отрасли, а также внедрённые у внешних заказчиков.
+        </p>
+        <div class="grid grid--3">
+          <article class="card">
+            <h3 class="card__title">ЦОД и ИТ‑инфраструктура</h3>
+            <p class="card__text">
+              Проектирование, поставка и ввод в эксплуатацию центров обработки данных, серверных и инженерной
+              инфраструктуры под ключ.
+            </p>
+            <ul class="card__list">
+              <li>Решения для отказоустойчивых ЦОД</li>
+              <li>Системы хранения и резервного копирования</li>
+              <li>Сетевое оборудование и СКС</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Доверенные ПАК (АДИКИС)</h3>
+            <p class="card__text">
+              Программно‑аппаратные комплексы для высоконагруженных информационных систем с повышенными
+              требованиями к безопасности.
+            </p>
+            <ul class="card__list">
+              <li>Отечественная элементная база</li>
+              <li>Подтверждённая информационная безопасность</li>
+              <li>Соответствие отраслевым стандартам</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Информационная безопасность</h3>
+            <p class="card__text">
+              Комплексные решения по защите информации и инфраструктуры: от аудита до внедрения средств
+              защиты и сопровождения.
+            </p>
+            <ul class="card__list">
+              <li>СЗИ для государственных и отраслевых систем</li>
+              <li>Средства контроля и мониторинга</li>
+              <li>Поддержка и сопровождение</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="section">
+      <div class="container">
+        <h2 class="section__title">Каталог оборудования</h2>
+        <p class="section__subtitle">
+          Поставляем оборудование ведущих российских и зарубежных производителей, адаптированное под
+          требования атомной и смежных отраслей.
+        </p>
+
+        <div class="filters">
+          <button class="chip chip--active" data-filter="all">Все категории</button>
+          <button class="chip" data-filter="dc">ЦОД и серверы</button>
+          <button class="chip" data-filter="network">Сетевое оборудование</button>
+          <button class="chip" data-filter="security">Информационная безопасность</button>
+          <button class="chip" data-filter="gis">ГИС‑решения</button>
+        </div>
+
+        <div class="grid grid--3 catalog">
+          <article class="product-card" data-category="dc" data-product-name="Серверные стойки и шасси">
+            <h3 class="product-card__title">Серверные стойки и шасси</h3>
+            <p class="product-card__desc">
+              Индустриальные и телеком‑стойки, оптимизированные под высокую плотность размещения и
+              отказоустойчивость.
+            </p>
+            <ul class="product-card__specs">
+              <li>Форм‑фактор: 19″, 42U / 47U</li>
+              <li>Поддержка горячей замены компонентов</li>
+              <li>Интеграция с системами мониторинга</li>
+            </ul>
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-product="Серверные стойки и шасси"
+            >
+              Добавить в корзину
+            </button>
+          </article>
+
+          <article class="product-card" data-category="dc" data-product-name="Системы хранения данных">
+            <h3 class="product-card__title">Системы хранения данных</h3>
+            <p class="product-card__desc">
+              Высокопроизводительные и масштабируемые СХД для критичных к отказам приложений и БД.
+            </p>
+            <ul class="product-card__specs">
+              <li>Поддержка SAN/NAS</li>
+              <li>Гибридные и all‑flash конфигурации</li>
+              <li>Функции репликации и снапшотов</li>
+            </ul>
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-product="Системы хранения данных"
+            >
+              Добавить в корзину
+            </button>
+          </article>
+
+          <article class="product-card" data-category="network" data-product-name="Маршрутизаторы и коммутаторы">
+            <h3 class="product-card__title">Маршрутизаторы и коммутаторы</h3>
+            <p class="product-card__desc">
+              Сетевые решения для построения отказоустойчивых высоконагруженных магистралей и доступных
+              сетей.
+            </p>
+            <ul class="product-card__specs">
+              <li>Поддержка L2/L3, QoS, MPLS</li>
+              <li>Резервирование каналов и питания</li>
+              <li>Интеграция с системами мониторинга</li>
+            </ul>
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-product="Маршрутизаторы и коммутаторы"
+            >
+              Добавить в корзину
+            </button>
+          </article>
+
+          <article class="product-card" data-category="security" data-product-name="Средства защиты информации">
+            <h3 class="product-card__title">Средства защиты информации</h3>
+            <p class="product-card__desc">
+              Межсетевые экраны, шлюзы безопасности, системы предотвращения вторжений и контроля
+              целостности.
+            </p>
+            <ul class="product-card__specs">
+              <li>Сертификация в соответствии с ГОСТ и ФСТЭК</li>
+              <li>Гибкая сегментация и политика доступа</li>
+              <li>Централизованное управление</li>
+            </ul>
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-product="Средства защиты информации"
+            >
+              Добавить в корзину
+            </button>
+          </article>
+
+          <article class="product-card" data-category="gis" data-product-name="ГИС‑платформы и серверы карт">
+            <h3 class="product-card__title">ГИС‑платформы и серверы карт</h3>
+            <p class="product-card__desc">
+              Геоинформационные системы и платформы для управления пространственными данными и транспортной
+              инфраструктурой.
+            </p>
+            <ul class="product-card__specs">
+              <li>Поддержка отраслевых стандартов ГИС</li>
+              <li>Высокая производительность при больших объёмах данных</li>
+              <li>Интеграция с внешними источниками и датчиками</li>
+            </ul>
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-product="ГИС‑платформы и серверы карт"
+            >
+              Добавить в корзину
+            </button>
+          </article>
+
+          <article class="product-card" data-category="security" data-product-name="Аппаратные крипто‑шлюзы">
+            <h3 class="product-card__title">Аппаратные крипто‑шлюзы</h3>
+            <p class="product-card__desc">
+              Аппаратные средства шифрования для организации доверенных каналов связи.
+            </p>
+            <ul class="product-card__specs">
+              <li>Защищённые VPN‑туннели</li>
+              <li>Поддержка отечественных алгоритмов криптографии</li>
+              <li>Масштабирование под распределённые системы</li>
+            </ul>
+            <button
+              class="product-card__btn"
+              type="button"
+              data-add-to-cart
+              data-product="Аппаратные крипто‑шлюзы"
+            >
+              Добавить в корзину
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cart" class="section section--gray">
+      <div class="container">
+        <h2 class="section__title">Корзина</h2>
+        <p class="section__subtitle">
+          Здесь отображается оборудование, которое вы добавили из каталога. В демонстрационной версии корзина не
+          привязана к backend и служит для формирования предварительной заявки.
+        </p>
+        <div class="card">
+          <h3 class="card__title">Состав корзины</h3>
+          <div id="cart-empty" class="card__text">
+            Ваша корзина пуста. Добавьте оборудование из каталога, чтобы сформировать запрос на коммерческое
+            предложение.
+          </div>
+          <ul id="cart-items" class="card__list" style="display: none"></ul>
+          <p id="cart-summary" class="card__text" style="display: none"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section section--gray">
+      <div class="container">
+        <h2 class="section__title">Услуги и проекты</h2>
+        <p class="section__subtitle">
+          Полный цикл работ: от обследования и проектирования до внедрения, сопровождения и развития
+          информационных систем. Услуги не добавляются в корзину и обсуждаются индивидуально в рамках
+          коммерческого предложения.
+        </p>
+
+        <div class="grid grid--2">
+          <article class="service">
+            <h3 class="service__title">Проектирование и строительство ЦОД</h3>
+            <p class="service__text">
+              Разработка концепции, технического проекта и рабочей документации, поставка и монтаж
+              оборудования, ввод в эксплуатацию и сопровождение.
+            </p>
+            <ul class="service__list">
+              <li>Обследование текущей инфраструктуры</li>
+              <li>Архитектура ЦОД с учётом SLA/SLO</li>
+              <li>Гарантийная и постгарантийная поддержка</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <h3 class="service__title">Внедрение платформенных бизнес‑приложений</h3>
+            <p class="service__text">
+              Создание цифровых шаблонов эксплуатации, отраслевых и корпоративных приложений на единой
+              платформе.
+            </p>
+            <ul class="service__list">
+              <li>Адаптация под внутренние регламенты заказчика</li>
+              <li>Интеграция с существующими системами</li>
+              <li>Обучение пользователей и администраторов</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <h3 class="service__title">Интеллектуальные транспортные системы</h3>
+            <p class="service__text">
+              Единые платформы управления транспортной системой и мониторинга инфраструктуры на базе ГИС и
+              телеметрии.
+            </p>
+            <ul class="service__list">
+              <li>Проектирование архитектуры ИТС</li>
+              <li>Интеграция с внешними службами и датчиками</li>
+              <li>Аналитика и дашборды для диспетчерских центров</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <h3 class="service__title">Разработка государственных ИС</h3>
+            <p class="service__text">
+              Создание и развитие государственных информационных систем с учётом нормативных требований и
+              отраслевых стандартов.
+            </p>
+            <ul class="service__list">
+              <li>Соблюдение требований по ИБ и персональным данным</li>
+              <li>Интеграция с государственными реестрами и шлюзами</li>
+              <li>Переход на отечественные технологические стеки</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="section">
+      <div class="container">
+        <h2 class="section__title">Почему Атомдата‑Интеграция</h2>
+        <p class="section__subtitle">
+          Выделенный ИТ‑блок ГК «Росатом» с отработанными регламентами и высоким уровнем экспертизы.
+        </p>
+
+        <div class="grid grid--3">
+          <article class="advantage">
+            <h3 class="advantage__title">Высокие стандарты качества</h3>
+            <p class="advantage__text">
+              Внутренние регламенты и процедуры, отработанные в атомной отрасли, позволяют выдерживать
+              высочайшие требования к надёжности и безопасности.
+            </p>
+          </article>
+
+          <article class="advantage">
+            <h3 class="advantage__title">Гибкость и партнёрская сеть</h3>
+            <p class="advantage__text">
+              Налаженные связи с ведущими российскими и иностранными производителями, выстроенные
+              логистические цепочки и опыт международных проектов.
+            </p>
+          </article>
+
+          <article class="advantage">
+            <h3 class="advantage__title">Интеллектуальный потенциал</h3>
+            <p class="advantage__text">
+              Собственные ИТ‑специалисты высочайшего уровня, победители международных чемпионатов и
+              эксперты с учёными степенями.
+            </p>
+          </article>
+
+          <article class="advantage">
+            <h3 class="advantage__title">Надёжность и устойчивость</h3>
+            <p class="advantage__text">
+              Принадлежность к ГК «Росатом», значительный уставный капитал и многолетний опыт реализации
+              крупных проектов.
+            </p>
+          </article>
+
+          <article class="advantage">
+            <h3 class="advantage__title">Развитый продуктовый портфель</h3>
+            <p class="advantage__text">
+              Решения, внедрённые и проверенные в атомной отрасли, а также у внешних заказчиков в различных
+              секторах экономики.
+            </p>
+          </article>
+
+          <article class="advantage">
+            <h3 class="advantage__title">Комплексный подход</h3>
+            <p class="advantage__text">
+              От обследования и консалтинга до поставки оборудования, внедрения, обучения и долгосрочного
+              сопровождения.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="company" class="section section--gray">
+      <div class="container">
+        <h2 class="section__title">Информация о компании</h2>
+        <p class="section__subtitle">
+          АО «Атомдата‑Интеграция» — интегратор и поставщик комплексных ИТ‑решений, созданных и апробированных
+          в атомной отрасли и внедрённых у внешних заказчиков.
+        </p>
+        <div class="grid grid--2">
+          <article class="card">
+            <h3 class="card__title">Ключевые направления</h3>
+            <ul class="card__list">
+              <li>Цифровой шаблон эксплуатации и платформенные бизнес‑приложения</li>
+              <li>Разработка государственных информационных систем</li>
+              <li>ЦОД и ИТ‑инфраструктура под ключ</li>
+              <li>Геоинформационные системы и технологии</li>
+              <li>Интеллектуальные транспортные системы</li>
+              <li>Информационная безопасность и доверенные ПАК</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Ценности и преимущества</h3>
+            <ul class="card__list">
+              <li>Высокие стандарты качества атомной отрасли</li>
+              <li>Развитая сеть партнёров среди российских и зарубежных производителей</li>
+              <li>Собственный ИТ‑блок ГК «Росатом» и сильная команда экспертов</li>
+              <li>Надёжность и финансовая устойчивость компании</li>
+              <li>Большой портфель реализованных проектов и решений</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section section--accent">
+      <div class="container contacts">
+        <div class="contacts__info">
+          <h2 class="section__title section__title--light">Свяжитесь с нами</h2>
+          <p class="section__subtitle section__subtitle--light">
+            Оставьте запрос на поставку оборудования или проект по цифровой трансформации — специалисты
+            Атомдата‑Интеграция подготовят для вас индивидуальное предложение.
+          </p>
+          <div class="contacts__grid">
+            <div>
+              <h3 class="contacts__label">Офис</h3>
+              <p class="contacts__value">
+                115191, г.&nbsp;Москва,<br />
+                4‑й Рощинский пр‑д, д.&nbsp;19
+              </p>
+            </div>
+            <div>
+              <h3 class="contacts__label">Сайт</h3>
+              <p class="contacts__value">
+                <a href="https://atomdata-int.ru/" target="_blank" rel="noreferrer">
+                  atomdata-int.ru
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form class="form" id="contact-form">
+          <h3 class="form__title">Запрос на коммерческое предложение</h3>
+          <div class="form__field">
+            <label for="name">ФИО *</label>
+            <input id="name" name="name" type="text" required placeholder="Иванов Иван Иванович" />
+          </div>
+          <div class="form__field">
+            <label for="company">Организация *</label>
+            <input id="company" name="company" type="text" required placeholder="Название компании" />
+          </div>
+          <div class="form__field form__field--2col">
+            <div>
+              <label for="email">E‑mail *</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.ru" />
+            </div>
+            <div>
+              <label for="phone">Телефон</label>
+              <input id="phone" name="phone" type="tel" placeholder="+7 (999) 000‑00‑00" />
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="interest">Интересующий продукт / услуга *</label>
+            <input
+              id="interest"
+              name="interest"
+              type="text"
+              required
+              placeholder="Например: ЦОД под ключ, СХД, ИТС"
+            />
+          </div>
+          <div class="form__field">
+            <label for="message">Краткое описание задачи</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Опишите ваши требования, сроки, ожидаемые объёмы и особенности инфраструктуры"
+            ></textarea>
+          </div>
+          <div class="form__footer">
+            <label class="checkbox">
+              <input type="checkbox" required />
+              <span>Я согласен на обработку персональных данных</span>
+            </label>
+            <button type="submit" class="btn btn--primary">Отправить запрос</button>
+          </div>
+          <p class="form__note">
+            Форма демонстрационная: данные не отправляются на сервер. Для боевого использования подключите
+            обработку формы на вашем backend.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <span>© 2022–2025 АО «Атомдата‑Интеграция»</span>
+          <span class="footer__dot">•</span>
+          <span>Сайт‑витрина оборудования и услуг</span>
+        </div>
+        <div class="footer__right">
+          <a href="#catalog" class="footer__link">Каталог</a>
+          <a href="#cart" class="footer__link">Корзина</a>
+          <a href="#company" class="footer__link">О компании</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="request-modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="request-modal-title">
+        <button class="modal__close" type="button" data-close-modal>&times;</button>
+        <h3 class="modal__title" id="request-modal-title">Запросить коммерческое предложение</h3>
+        <p class="modal__subtitle">
+          Заполните форму, и мы подготовим предложение по выбранному оборудованию или услуге.
+        </p>
+        <form class="modal__form" id="modal-form">
+          <div class="form__field">
+            <label for="modal-name">ФИО *</label>
+            <input id="modal-name" name="name" type="text" required />
+          </div>
+          <div class="form__field">
+            <label for="modal-email">E‑mail *</label>
+            <input id="modal-email" name="email" type="email" required />
+          </div>
+          <div class="form__field">
+            <label for="modal-product">Интересующий продукт / услуга *</label>
+            <input id="modal-product" name="product" type="text" required />
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Отправить</button>
+          <p class="form__note">
+            Форма демонстрационная и не отправляет данные. В реальном проекте подключите обработку на
+            сервере.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" aria-hidden="true">
+      <span class="toast__text">Спасибо! Ваш запрос отправлен (демо‑режим).</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
