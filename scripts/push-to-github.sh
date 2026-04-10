@@ -18,13 +18,15 @@ fi
 TOKEN="$(tr -d ' \n\r' < "$TOKEN_FILE")"
 
 GH_VER="2.89.0"
-GH_DIR="$ROOT/.tools/gh_${GH_VER}_macOS_arm64"
+ARCH="$(uname -m)"
+if [[ "$ARCH" == "arm64" ]]; then GH_ZIP="gh_${GH_VER}_macOS_arm64.zip"; else GH_ZIP="gh_${GH_VER}_macOS_amd64.zip"; fi
+GH_DIR="$ROOT/.tools/${GH_ZIP%.zip}"
 GH_BIN="$GH_DIR/bin/gh"
 if [[ ! -x "$GH_BIN" ]]; then
   mkdir -p "$ROOT/.tools"
   TMP="$ROOT/.tools/gh_dl.zip"
-  echo "Скачиваю GitHub CLI…"
-  curl -sL "https://github.com/cli/cli/releases/download/v${GH_VER}/gh_${GH_VER}_macOS_arm64.zip" -o "$TMP"
+  echo "Скачиваю GitHub CLI ($ARCH)…"
+  curl -sL "https://github.com/cli/cli/releases/download/v${GH_VER}/$GH_ZIP" -o "$TMP"
   unzip -q -o "$TMP" -d "$ROOT/.tools"
   rm -f "$TMP"
 fi
