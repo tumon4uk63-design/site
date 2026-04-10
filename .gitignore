@@ -5,3 +5,6 @@ Thumbs.db
 .env
 .env.local
 .tools/
+# не коммитить локальные заметки с паролями от хостинга
+hosting-credentials.txt
+.ftp-credentials
