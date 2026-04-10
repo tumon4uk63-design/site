@@ -2,7 +2,26 @@
 
 Статический многостраничный сайт: каталог, корзина, личный кабинет (данные в `localStorage`).
 
-## Публикация на GitHub Pages
+## Автовыгрузка одной командой (нужен токен)
+
+Из этой среды Cursor **нельзя** войти в GitHub за вас: браузерная сессия недоступна.
+
+1. Создайте **Personal Access Token**: [github.com/settings/tokens](https://github.com/settings/tokens) → **Generate new token** → включите право **`repo`**.
+2. В корне проекта создайте файл **`.github_token`** (он в `.gitignore`) и вставьте токен одной строкой, без пробелов.
+3. В терминале:
+
+```bash
+cd "/Users/k.timofeev/Desktop/Пробник сайта"
+./scripts/push-to-github.sh
+```
+
+Имя репозитория по умолчанию: `stalprofil-demo`. Другое имя: `GITHUB_REPO_NAME=my-site ./scripts/push-to-github.sh`
+
+После успешного push **удалите** `.github_token`.
+
+---
+
+## Публикация на GitHub Pages (вручную)
 
 ### 1. Создайте репозиторий на GitHub
 
