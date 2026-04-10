@@ -1,3 +1,7 @@
 .DS_Store
 Thumbs.db
 *.log
+.github_token
+.env
+.env.local
+.tools/
