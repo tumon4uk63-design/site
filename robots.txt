@@ -1,4 +1,4 @@
-# Замените https://example.com на ваш реальный домен перед публикацией.
+# metalltrue.ru
 User-agent: *
 Allow: /
 
@@ -8,4 +8,4 @@ Allow: /
 # Disallow: /account.html
 # Disallow: /cart.html
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://metalltrue.ru/sitemap.xml

@@ -66,7 +66,7 @@ git push -u origin main
 
 ### 5. Обновите SEO под ваш домен
 
-Во всех HTML, в `robots.txt`, `sitemap.xml` и в JSON-LD замените `https://example.com` на ваш реальный URL (GitHub Pages или свой домен).
+Продакшен-домен сайта: **https://metalltrue.ru** (указан в HTML, `robots.txt`, `sitemap.xml`, JSON-LD; в корне репозитория файл **`CNAME`** для GitHub Pages).
 
 ---
 
