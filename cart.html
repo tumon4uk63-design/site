@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Корзина — оформление заявки на металлопрокат | СтальПрофиль</title>
+  <meta name="description" content="Корзина заказа металлопроката и металлоконструкций. Итог по позициям, оформление заявки для юрлиц." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#0e1116" />
+  <link rel="canonical" href="https://example.com/cart.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/cart.html" />
+  <meta property="og:title" content="Корзина — СтальПрофиль" />
+  <meta property="og:description" content="Проверьте заказ и отправьте заявку." />
+  <meta property="og:image" content="https://example.com/og-cover.svg" />
+  <meta property="og:site_name" content="СтальПрофиль" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-inner" data-page="cart">
+  <header class="header">
+    <div class="header__inner container">
+      <a class="logo" href="index.html">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Сталь<span>Профиль</span></span>
+      </a>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="index.html#services">Услуги</a>
+        <a href="index.html#about">О компании</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <a class="phone" href="tel:+78001234567">8 (800) 123-45-67</a>
+        <a class="btn btn--ghost" href="login.html" id="navAccount">Войти</a>
+        <a class="btn btn--ghost" href="cart.html" aria-current="page">
+          Корзина
+          <span class="cart-badge" data-cart-badge hidden>0</span>
+        </a>
+      </div>
+      <button type="button" class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container section cart-page-layout">
+    <nav class="breadcrumbs"><a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / Корзина</nav>
+    <h1 class="page-title">Корзина</h1>
+    <p class="page-lead">Проверьте позиции и оформите заявку. В демо заказ сохраняется в личном кабинете.</p>
+
+    <div id="cartPage"></div>
+
+    <div class="cart-summary" id="cartSummaryBlock">
+      <div>
+        <span class="text-muted" style="color: var(--text-muted)">Итого к оплате по прайсу</span><br />
+        <strong id="cartPageTotal">0 ��</strong>
+      </div>
+      <button type="button" class="btn btn--primary" id="cartCheckoutBtn">Оформить заявку</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__text">Сталь<span>Профиль</span></span>
+        <p>Демо-сайт.</p>
+      </div>
+      <div><strong>Каталог</strong><p><a href="catalog.html">Перейти</a></p></div>
+      <div><strong>Телефон</strong><p><a href="tel:+78001234567">8 (800) 123-45-67</a></p></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/catalog-data.js"></script>
+  <script src="js/site-core.js"></script>
+  <script src="js/page-cart.js"></script>
+</body>
+</html>

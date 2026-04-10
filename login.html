@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Вход в личный кабинет — СтальПрофиль</title>
+  <meta name="description" content="Вход для клиентов СтальПрофиль: заказы, документы, история заявок на металлопрокат." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#0e1116" />
+  <link rel="canonical" href="https://example.com/login.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/login.html" />
+  <meta property="og:title" content="Вход — СтальПрофиль" />
+  <meta property="og:site_name" content="СтальПрофиль" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-inner" data-page="login">
+  <header class="header">
+    <div class="header__inner container">
+      <a class="logo" href="index.html">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Сталь<span>Профиль</span></span>
+      </a>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="cart.html">Корзина</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="cart.html">Корзина <span class="cart-badge" data-cart-badge hidden>0</span></a>
+      </div>
+      <button type="button" class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="auth-layout">
+    <div class="auth-card">
+      <h1>Вход</h1>
+      <p class="lead">Как на типовом B2B-сайте: e-mail и пароль или соцсети (в демо соцсети не подключены).</p>
+
+      <div class="social-grid">
+        <button type="button" class="btn-social" data-social="Google">Google</button>
+        <button type="button" class="btn-social btn-social--yandex" data-social="Яндекс">Яндекс ID</button>
+        <button type="button" class="btn-social btn-social--vk" data-social="ВКонтакте">ВКонтакте</button>
+        <button type="button" class="btn-social" data-social="Mail.ru">Mail.ru</button>
+      </div>
+
+      <div class="auth-divider">или e-mail</div>
+
+      <form class="auth-form" id="loginForm">
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" autocomplete="username" required placeholder="you@company.ru" />
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="••••••••" />
+        <button type="submit" class="btn btn--primary btn--block">Войти</button>
+      </form>
+
+      <p class="auth-footer">Нет аккаунта? <a href="register.html">Регистрация</a></p>
+      <p class="form-note" style="margin-top: 1rem; text-align: center">Демо: любой пароль создаёт сессию в браузере.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand"><span class="logo__text">Сталь<span>Профиль</span></span><p>Демо.</p></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/catalog-data.js"></script>
+  <script src="js/site-core.js"></script>
+  <script src="js/page-auth.js"></script>
+</body>
+</html>

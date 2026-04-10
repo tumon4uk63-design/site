@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Личный кабинет — профиль и заявки | СтальПрофиль</title>
+  <meta name="description" content="Профиль компании, история заявок на металлопрокат и металлоконструкции в личном кабинете СтальПрофиль." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0e1116" />
+  <link rel="canonical" href="https://example.com/account.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/account.html" />
+  <meta property="og:title" content="Личный кабинет — СтальПрофиль" />
+  <meta property="og:site_name" content="СтальПрофиль" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-inner" data-page="account">
+  <header class="header">
+    <div class="header__inner container">
+      <a class="logo" href="index.html">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Сталь<span>Профиль</span></span>
+      </a>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="cart.html">Корзина</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="account.html" aria-current="page">Кабинет</a>
+        <a class="btn btn--ghost" href="cart.html">Корзина <span class="cart-badge" data-cart-badge hidden>0</span></a>
+      </div>
+      <button type="button" class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <nav class="breadcrumbs"><a href="index.html">Главная</a> / Личный кабинет</nav>
+    <h1 class="page-title">Личный кабинет</h1>
+    <p class="page-lead">Профиль, заявки и реквизиты — шаблон как у интернет-магазинов (данные только локально в браузере).</p>
+
+    <div class="account-layout">
+      <div class="account-nav" role="tablist">
+        <button type="button" class="is-active" data-account-tab="profile" role="tab">Профиль</button>
+        <button type="button" data-account-tab="orders" role="tab">Мои заявки</button>
+        <button type="button" id="logoutBtn" class="link-btn" style="margin-top: 1rem; padding: 0.65rem 0.9rem">Выйти</button>
+      </div>
+
+      <div>
+        <div class="account-panel" data-account-panel="profile" role="tabpanel">
+          <h2>Данные компании</h2>
+          <dl class="dl-grid">
+            <div><dt>ФИО</dt><dd id="accName">—</dd></div>
+            <div><dt>E-mail</dt><dd id="accEmail">—</dd></div>
+            <div><dt>Телефон</dt><dd id="accPhone">—</dd></div>
+            <div><dt>Компания</dt><dd id="accCompany">—</dd></div>
+          </dl>
+          <h2>Редактирование</h2>
+          <form class="auth-form" id="profileForm" style="max-width: 420px">
+            <label>Контактное лицо</label>
+            <input name="name" type="text" />
+            <label>Компания</label>
+            <input name="company" type="text" />
+            <label>Телефон</label>
+            <input name="phone" type="tel" />
+            <button type="submit" class="btn btn--primary">Сохранить</button>
+          </form>
+        </div>
+
+        <div class="account-panel" data-account-panel="orders" role="tabpanel" hidden>
+          <h2>История заявок</h2>
+          <p class="page-lead" style="margin-top: 0">После оформления из корзины заявка появляется здесь (демо).</p>
+          <div class="table-wrap">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th>Номер</th>
+                  <th>Дата</th>
+                  <th>Позиций</th>
+                  <th>Сумма</th>
+                </tr>
+              </thead>
+              <tbody id="ordersBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand"><span class="logo__text">Сталь<span>Профиль</span></span><p>Демо.</p></div>
+      <div><a href="catalog.html">Каталог</a></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/catalog-data.js"></script>
+  <script src="js/site-core.js"></script>
+  <script src="js/page-auth.js"></script>
+</body>
+</html>

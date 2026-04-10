@@ -1,0 +1,11 @@
+# Замените https://example.com на ваш реальный домен перед публикацией.
+User-agent: *
+Allow: /
+
+# Закрыть от индексации служебные страницы (раскомментируйте при необходимости):
+# Disallow: /login.html
+# Disallow: /register.html
+# Disallow: /account.html
+# Disallow: /cart.html
+
+Sitemap: https://example.com/sitemap.xml

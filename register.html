@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Регистрация для юрлиц и закупщиков — СтальПрофиль</title>
+  <meta name="description" content="Создайте аккаунт для заказа металлопроката: компания, контакты, доступ к кабинету и истории заявок." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#0e1116" />
+  <link rel="canonical" href="https://example.com/register.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/register.html" />
+  <meta property="og:title" content="Регистрация — СтальПрофиль" />
+  <meta property="og:site_name" content="СтальПрофиль" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-inner" data-page="register">
+  <header class="header">
+    <div class="header__inner container">
+      <a class="logo" href="index.html">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Сталь<span>Профиль</span></span>
+      </a>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="cart.html">Корзина</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="login.html">Войти</a>
+        <a class="btn btn--ghost" href="cart.html">Корзина <span class="cart-badge" data-cart-badge hidden>0</span></a>
+      </div>
+      <button type="button" class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="auth-layout">
+    <div class="auth-card">
+      <h1>Регистрация</h1>
+      <p class="lead">Юрлицо или ИП — стандартные поля, как на маркетплейсах металлопроката.</p>
+
+      <div class="social-grid">
+        <button type="button" class="btn-social" data-social="Google">Google</button>
+        <button type="button" class="btn-social btn-social--yandex" data-social="Яндекс">Яндекс ID</button>
+        <button type="button" class="btn-social btn-social--vk" data-social="ВКонтакте">ВКонтакте</button>
+        <button type="button" class="btn-social" data-social="Mail.ru">Mail.ru</button>
+      </div>
+
+      <div class="auth-divider">или форма</div>
+
+      <form class="auth-form" id="registerForm">
+        <label for="name">Контактное лицо *</label>
+        <input id="name" name="name" required placeholder="Иван Иванов" />
+        <label for="company">Компания</label>
+        <input id="company" name="company" placeholder="ООО «Пример»" />
+        <label for="phone">Телефон *</label>
+        <input id="phone" name="phone" type="tel" required placeholder="+7 …" />
+        <label for="email">E-mail *</label>
+        <input id="email" name="email" type="email" required placeholder="you@company.ru" />
+        <label for="password">Пароль *</label>
+        <input id="password" name="password" type="password" required minlength="6" placeholder="не менее 6 символов" />
+        <label for="password2">Повтор пароля *</label>
+        <input id="password2" name="password2" type="password" required placeholder="ещё раз" />
+        <button type="submit" class="btn btn--primary btn--block">Создать аккаунт</button>
+      </form>
+
+      <p class="auth-footer">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand"><span class="logo__text">Сталь<span>Профиль</span></span><p>Демо.</p></div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/catalog-data.js"></script>
+  <script src="js/site-core.js"></script>
+  <script src="js/page-auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Каталог металлопроката — двутавр, швеллер, уголок, трубы | СтальПрофиль</title>
+  <meta name="description" content="Каталог металлопроката: двутавры ГОСТ 8239, швеллер ГОСТ 8240, уголок, труба профильная и ВГП, арматура А500С, лист, сетка, металлоконструкции. Цены, добавление в корзину." />
+  <meta name="keywords" content="каталог металлопроката, купить двутавр, швеллер цена, уголок стальной, арматура каталог, труба профильная прайс" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0e1116" />
+  <link rel="canonical" href="https://example.com/catalog.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:url" content="https://example.com/catalog.html" />
+  <meta property="og:title" content="Каталог металлопроката — СтальПрофиль" />
+  <meta property="og:description" content="Балки, швеллер, уголок, трубы, арматура, листы и МК. Фильтры и поиск по каталогу." />
+  <meta property="og:image" content="https://example.com/og-cover.svg" />
+  <meta property="og:site_name" content="СтальПрофиль" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Каталог металлопроката — СтальПрофиль" />
+  <meta name="twitter:description" content="70+ позиций: прокат и металлоконструкции." />
+  <meta name="twitter:image" content="https://example.com/og-cover.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Каталог металлопроката",
+    "description": "Сортовой и фасонный прокат, трубы, арматура, листы, металлоконструкции.",
+    "url": "https://example.com/catalog.html",
+    "isPartOf": { "@type": "WebSite", "name": "СтальПрофиль", "url": "https://example.com/" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://example.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Каталог", "item": "https://example.com/catalog.html" }
+      ]
+    }
+  }
+  </script>
+</head>
+<body class="page-inner" data-page="catalog">
+  <header class="header">
+    <div class="header__inner container">
+      <a class="logo" href="index.html">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Сталь<span>Профиль</span></span>
+      </a>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html" aria-current="page">Каталог</a>
+        <a href="index.html#services">Услуги</a>
+        <a href="index.html#about">О компании</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <a class="phone" href="tel:+78001234567">8 (800) 123-45-67</a>
+        <a class="btn btn--ghost" href="login.html" id="navAccount">Войти</a>
+        <a class="btn btn--ghost" href="cart.html">
+          Корзина
+          <span class="cart-badge" data-cart-badge hidden>0</span>
+        </a>
+      </div>
+      <button type="button" class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container section cart-page-layout">
+    <nav class="breadcrumbs" aria-label="Навигация">
+      <a href="index.html">Главная</a> / Каталог
+    </nav>
+    <h1 class="page-title">Каталог металлопроката</h1>
+    <p class="page-lead">
+      Сортовой и фасонный прокат, трубы, арматура, листы и металлоконструкции. Цены ориентировочные для демо-макета.
+    </p>
+    <div class="filters" id="filters"></div>
+    <div class="search-row">
+      <label class="search">
+        <span class="visually-hidden">Поиск</span>
+        <input type="search" id="searchInput" placeholder="Поиск: 20Б1, швеллер, А500С, ВГП…" autocomplete="off" />
+      </label>
+    </div>
+    <div class="products" id="products" aria-live="polite"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__text">Сталь<span>Профиль</span></span>
+        <p>Демо-сайт металлопроката.</p>
+      </div>
+      <div>
+        <strong>Разделы</strong>
+        <p><a href="catalog.html">Каталог</a> · <a href="cart.html">Корзина</a></p>
+      </div>
+      <div>
+        <strong>Связь</strong>
+        <p><a href="tel:+78001234567">8 (800) 123-45-67</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/catalog-data.js"></script>
+  <script src="js/site-core.js"></script>
+  <script src="js/page-catalog.js"></script>
+</body>
+</html>
